@@ -26,7 +26,7 @@ public class MyHashMap {
         return result;
     }
 
-    public void add(Object key, Object value) throws Exception{
+    public void put(Object key, Object value) throws Exception{
         MyHashMapItem item = findByKey(key);
         if (item.getKey() == null){
             MyHashMapItem newItem = new MyHashMapItem(key, value);
@@ -36,7 +36,7 @@ public class MyHashMap {
         }
     }
 
-    public void del(Object key) throws Exception{
+    public void remove(Object key) throws Exception{
         MyHashMapItem item = findByKey(key);
         if (item.getKey() != null){
             this.items.remove(item);

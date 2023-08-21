@@ -11,14 +11,14 @@ public class Main {
         lesson1.sayHello();
 
         MyHashMap myhashMap = new MyHashMap();
-        myhashMap.add(1, 569);
-        myhashMap.add(2, 584.5);
+        myhashMap.put(1, 569);
+        myhashMap.put(2, 584.5);
 
         for (MyHashMapItem item : myhashMap.getItems()) {
             System.out.println(item);
         }
 
-        myhashMap.del(1);
+        myhashMap.remove(1);
         for (MyHashMapItem item : myhashMap.getItems()) {
             System.out.println(item);
         }
