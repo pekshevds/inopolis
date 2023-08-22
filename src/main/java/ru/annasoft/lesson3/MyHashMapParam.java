@@ -10,7 +10,7 @@ public class MyHashMapParam {
 
     public MyHashMapParam() {
 
-        this.items = new ArrayList<MyHashMapParamItem>();
+        this.items = new ArrayList<>();
     }
 
     private MyHashMapParamItem findByKey(int key){
