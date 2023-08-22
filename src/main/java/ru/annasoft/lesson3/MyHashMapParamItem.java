@@ -40,10 +40,7 @@ public class MyHashMapParamItem {
     }
 
     public boolean isEmpty(){
-        boolean result = false;
-        if (this.key == null){
-            result = true;
-        }
+        boolean result = this.key == null;
         return result;
     }
 }
