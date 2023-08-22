@@ -27,7 +27,7 @@ public class MyHashMapParam {
 
     public void put(int key, String value) throws Exception{
         MyHashMapParamItem item = findByKey(key);
-        if (item.getKey() < 0){
+        if (item.isEmpty()){
             MyHashMapParamItem newItem = new MyHashMapParamItem(key, value);
             this.items.add(newItem);
         } else{
@@ -37,7 +37,7 @@ public class MyHashMapParam {
 
     public void remove(int key) throws Exception{
         MyHashMapParamItem item = findByKey(key);
-        if (item.getKey() >= 0 ){
+        if (! item.isEmpty()){
             this.items.remove(item);
         } else {
             throw new Exception("Deleting isn't possible. Item with key="+ key +" is doesn't exist.");
@@ -46,7 +46,7 @@ public class MyHashMapParam {
 
     public void update(int key, String value) throws Exception{
         MyHashMapParamItem item = findByKey(key);
-        if (item.getKey() >= 0){
+        if (! item.isEmpty()){
             item.setValue(value);
         }else {
             throw new Exception("Updating isn't possible. Item with key="+ key +" is doesn't exist.");
@@ -59,5 +59,26 @@ public class MyHashMapParam {
 
     public List<MyHashMapParamItem> getItems() {
         return items;
+    }
+
+    public List<MyHashMapParamItem> entrySet(){
+        return this.items;
+    }
+    public List<String> values(){
+
+        List<String> result = new ArrayList<>();
+        for (MyHashMapParamItem item : this.items) {
+            result.add(item.getValue());
+        }
+        return result;
+    }
+
+    public List<Integer> keySet(){
+
+        List<Integer> result = new ArrayList<>();
+        for (MyHashMapParamItem item : this.items) {
+            result.add(item.getKey());
+        }
+        return result;
     }
 }

@@ -2,17 +2,17 @@ package ru.annasoft.lesson3;
 
 public class MyHashMapParamItem {
 
-    private int key;
+    private Integer key;
     private String value;
 
-    public MyHashMapParamItem(int key, String value) {
+    public MyHashMapParamItem(Integer key, String value) {
         this.key = key;
         this.value = value;
     }
 
     public MyHashMapParamItem() {
-        this.key = -1;
-        this.value = "";
+        this.key = null;
+        this.value = null;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class MyHashMapParamItem {
         return key;
     }
 
-    public void setKey(int key) {
+    public void setKey(Integer key) {
         this.key = key;
     }
 
@@ -41,7 +41,7 @@ public class MyHashMapParamItem {
 
     public boolean isEmpty(){
         boolean result = false;
-        if (this.key < 0){
+        if (this.key == null){
             result = true;
         }
         return result;

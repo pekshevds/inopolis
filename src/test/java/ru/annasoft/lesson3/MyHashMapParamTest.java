@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Before;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyHashMapParamTest {
 
     private MyHashMapParam myHashMapParam;
@@ -110,4 +113,26 @@ public class MyHashMapParamTest {
         Assert.assertEquals(expected, this.myHashMapParam.getItems().size());
     }
 
+    @Test
+    public void entrySet_positive() {
+        int expected = 3;
+        Assert.assertEquals(expected, this.myHashMapParam.getItems().size());
+    }
+
+    @Test
+    public void values_positive() {
+        List<String> expected = new ArrayList<>();
+        expected.add("one");
+        expected.add("two");
+        expected.add("three");
+        Assert.assertEquals(expected, this.myHashMapParam.values());
+    }
+    @Test
+    public void keySet_positive() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(2);
+        expected.add(3);
+        Assert.assertEquals(expected, this.myHashMapParam.keySet());
+    }
 }

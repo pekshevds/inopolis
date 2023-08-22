@@ -4,10 +4,13 @@ import ru.annasoft.lesson1.Lesson1;
 import ru.annasoft.lesson2.MyHashMap;
 import ru.annasoft.lesson2.MyHashMapItem;
 
+import java.util.HashMap;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        Lesson1 lesson1 = new Lesson1();
+        /*Lesson1 lesson1 = new Lesson1();
         lesson1.sayHello();
 
         MyHashMap myhashMap = new MyHashMap();
@@ -32,6 +35,6 @@ public class Main {
 
         item = myhashMap.get(3);
         System.out.println(item);
-        System.out.println(item.isEmpty());
+        System.out.println(item.isEmpty());*/
     }
 }
