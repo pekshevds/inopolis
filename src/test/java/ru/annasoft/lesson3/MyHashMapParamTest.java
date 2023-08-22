@@ -101,6 +101,7 @@ public class MyHashMapParamTest {
     public void get_negative() {
         boolean expected = true;
         MyHashMapParamItem result = this.myHashMapParam.get(4);
+        System.out.println(result);
         Assert.assertEquals(expected, result.isEmpty());
     }
 

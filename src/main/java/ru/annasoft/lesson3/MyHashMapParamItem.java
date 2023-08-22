@@ -11,7 +11,7 @@ public class MyHashMapParamItem {
     }
 
     public MyHashMapParamItem() {
-        this.key = 0;
+        this.key = -1;
         this.value = "";
     }
 
@@ -41,6 +41,7 @@ public class MyHashMapParamItem {
 
     public boolean isEmpty(){
         boolean result = false;
+        System.out.println(this.key);
         if (this.key < 0){
             result = true;
         }

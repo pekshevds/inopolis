@@ -27,7 +27,7 @@ public class MyHashMapParam {
 
     public void put(int key, String value) throws Exception{
         MyHashMapParamItem item = findByKey(key);
-        if (item.getKey() >= 0){
+        if (item.getKey() < 0){
             MyHashMapParamItem newItem = new MyHashMapParamItem(key, value);
             this.items.add(newItem);
         } else{
