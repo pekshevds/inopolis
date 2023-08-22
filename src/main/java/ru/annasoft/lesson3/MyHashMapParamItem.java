@@ -41,7 +41,6 @@ public class MyHashMapParamItem {
 
     public boolean isEmpty(){
         boolean result = false;
-        System.out.println(this.key);
         if (this.key < 0){
             result = true;
         }
