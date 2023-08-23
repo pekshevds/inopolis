@@ -116,7 +116,7 @@ public class MyHashMapParamTest {
     @Test
     public void entrySet_positive() {
         int expected = 3;
-        Assert.assertEquals(expected, this.myHashMapParam.getItems().size());
+        Assert.assertEquals(expected, this.myHashMapParam.entrySet().size());
     }
 
     @Test
