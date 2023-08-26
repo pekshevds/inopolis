@@ -22,7 +22,6 @@ public class Lesson4Test {
         fieldsToCleanup.add("field1");
         fieldsToCleanup.add("field2");
         fieldsToCleanup.add("field3");
-        fieldsToCleanup.add("field4");
         fieldsToCleanup.add("field5");
         fieldsToCleanup.add("field6");
         fieldsToCleanup.add("field7");
